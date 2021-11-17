@@ -1,18 +1,21 @@
 // logs.js
-const util = require('../../utils/util.js')
+
+
+const htmlMsg =
+`<div class="div_class">
+  <p class="p">
+    <a href="github.com">源码</a>
+  </p>
+</div>
+`
 
 Page({
   data: {
-    logs: []
+    aboutMsg: htmlMsg
   },
   onLoad() {
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return {
-          date: util.formatTime(new Date(log)),
-          timeStamp: log
-        }
-      })
+      aboutMsg: htmlMsg
     })
   }
 })

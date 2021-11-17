@@ -19,14 +19,28 @@
 
   <view class="section">
   <form bindsubmit="calText">
-    <textarea class="msg-input"  placeholder="请输入消息" name="msg"/>
+  <view class="colShow">
+    <textarea class="msg-input"  placeholder="内容" name="msg"/>
     <view class="divLine"></view>
-    <textarea class="code-input"  placeholder="请输入密钥" name="code"/>
+    <textarea class="code-input"  placeholder="密钥" name="code"/>
+  </view>
     <view class="divLine"></view>
-    <button form-type="submit"> 提交 </button>
+    <view class="rowShow">
+    <radio-group  bindchange="radioChange">
+    <label class="radio">
+      <radio value="enc" checked="true"/>加密
+    </label>
+    <label class="radio">
+      <radio value="dec" />解密
+    </label>
+  </radio-group>
+    <button form-type="submit" name="enc" style="width: 50%;"> 确定 </button>
+    </view>
   </form>
-  <textarea class="cal-msg">{{cal_text}}</textarea>
+  <view class="divLine"></view>
+  <textarea class="cal-msg" placeholder=" ">{{cal_text}}</textarea>
 </view>
+<view bindtap="aboutPage" style="font-size: small;">关于</view>
     <!-- </block>
   </view>
   <view class="usermotto">

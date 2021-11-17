@@ -40,7 +40,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wx6e21eaedf88b7ee8",
+  "appid": "wx311d9742abe3b764",
   "projectname": "msgAes",
   "debugOptions": {
     "hidedInDevtools": []
@@ -51,6 +51,7 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []
